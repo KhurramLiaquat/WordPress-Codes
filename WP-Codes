@@ -220,3 +220,41 @@ ADD YOUR GTM CODE
 add_action( 'wp_footer', function () { ?>
 ADD YOUR GTM CODE
 <?php }  ); 
+
+/* Change Logo, Text Colours, Background Colour on Scroll
+Add this to the Custom CSS of the Parent Container or Section to Change Logo, Text Colours, Background Colour on Scroll
+
+In this scenario; ensure the original logo has the class name [original-logo], and the new logo has [scroll-logo], and any navigation menus, or icons, or other text items have [menutextcolours].
+
+Also ensure that an Offset Scroll Effect is added such as 50, 100, or 500 etc. */
+
+/* Change the Background Colour on Scroll */
+.elementor-sticky--effects {
+ background: #ffffffac!important;
+ transition: background 0.5s ease-in-out;
+}
+
+/* The scroll-logo is currently off.*/
+.scroll-logo {
+ display: none;
+}
+/* Shut this logo off and activate the other logo after scroll*/
+.elementor-sticky--effects .scroll-logo {
+display: inline-block;
+max-width: 80px !important;
+transition: display 0.5s ease-in-out, max-width 0.5s ease-in-out;
+}
+
+.elementor-sticky--effects .original-logo {
+ display: none;
+ transition: display 0.5s ease-in-out;
+}
+
+
+/* Change Text Colour and Links colour */
+.elementor-sticky--effects .menutextcolours ul li a {
+ color: #ff0050!important;
+ font-size: 16px !important;
+   line-height: 0px !important;
+ transition: color 0.5s ease-in-out, font-size 0.5s ease-in-out, line-height 0.5s ease-in-out;
+}
