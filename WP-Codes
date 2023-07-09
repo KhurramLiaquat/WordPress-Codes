@@ -324,3 +324,17 @@ function ecommercehints_stock_status_progress_bar() {
 	$stock_quantity = $product->get_stock_quantity();
 	echo 'Only ' . $stock_quantity . ' tickets remaining!<br><progress max="100" value="'.$stock_quantity.'"></progress>'; // 100 being the fill level of the progress bar (the left most value)
 }
+
+/* Reposition Elementor Carousel Navigation Arrows
+Code: */
+.elementor-element .swiper~.elementor-swiper-button-next {
+position: relative;
+left: 25px;
+bottom: 20px;
+}
+
+.elementor-element .swiper~.elementor-swiper-button-prev {
+position: relative;
+left: 10px;
+bottom: 20px;
+}
