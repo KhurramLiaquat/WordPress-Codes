@@ -208,3 +208,15 @@ div.e-collapse:nth-child(1){display: none !important;}
   flex-basis: auto;
 }
 }
+
+/* Add Google Tag Manager Code Snippets
+Add this to Code Snippets, and decide on placing it in the Header or Footer (I recommend Footer so not to affect Page Speed Performance). Use this to add Google Tag Manager Code Snippets. */
+
+add_action( 'wp_head', function () { ?>
+ADD YOUR GTM CODE
+<?php }  ); 
+
+
+add_action( 'wp_footer', function () { ?>
+ADD YOUR GTM CODE
+<?php }  ); 
