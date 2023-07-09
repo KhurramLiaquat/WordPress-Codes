@@ -1,0 +1,10 @@
+Remove Google Fonts (Elementor and separate code for Non-Elementor)
+
+add_filter( 'elementor/frontend/print_google_fonts', '__return_false' );
+
+or use the below code for Non-Elementor Sites
+
+function disable_google_fonts() {
+	return false;
+}
+add_filter( 'print_google_fonts', 'disable_google_fonts' );
