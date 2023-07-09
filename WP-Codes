@@ -360,3 +360,9 @@ function custom_hide_header_script() {
 </script>
 <?php
 }
+/* CSS Code for Transition: */
+
+.scrolling-header {
+ transition: all .5s ease!important;
+}
+
