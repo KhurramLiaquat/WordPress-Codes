@@ -338,3 +338,25 @@ position: relative;
 left: 10px;
 bottom: 20px;
 }
+
+/* Elementor Scroll Sticky Header */
+
+add_action('wp_footer', 'custom_hide_header_script');
+function custom_hide_header_script() {
+?>
+<script type="text/javascript">
+  (function() {
+    var prevScrollpos = window.pageYOffset;
+    window.onscroll = function() {
+      var currentScrollPos = window.pageYOffset;
+      if (prevScrollpos > currentScrollPos) {
+        document.getElementById("scrolling-header").style.top = "0";
+      } else {
+        document.getElementById("scrolling-header").style.top = "-100px";
+      }
+      prevScrollpos = currentScrollPos;
+    };
+  })();
+</script>
+<?php
+}
