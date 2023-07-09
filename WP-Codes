@@ -297,3 +297,15 @@ hover.target.style.objectPosition = '0px 0px';
 }
 
 </script>
+/* Off-Canvas Menu
+   To fix Elementor Bug for off-canvas menu if the menu is on the right side of the screen and make it full width */
+
+Selector .menu-item > a:focus {
+    background:none;
+}
+Add CSS to show off-canvas menu in breakpoints:
+@media (min-width: 1025px) {
+    body:not(.elementor-editor-active) .off-canvas-menu {
+        display: none !important;
+    }
+}
